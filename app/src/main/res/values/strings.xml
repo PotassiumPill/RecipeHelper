@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Recipe Helper</string>
+    <string name="start_recipe_activity_label">Start Recipe</string>
+    <string name="edit_recipe_activity_label">Edit Recipe</string>
+    <string name="edit_recipe_activity_alternate_label">Create New Recipe</string>
+    <string name="edit_delete_image_desc">Alert: edit or delete recipe?</string>
+    <string name="prep_time_header">Prep Time:</string>
+    <string name="edit_prep_time_hour_hint">hh</string>
+    <string name="edit_prep_time_minute_hint">mm</string>
+    <string name="edit_prep_time_second_hint">ss</string>
+    <string name="edit_prep_time_colon">:</string>
+    <string name="edit_ingredient_hint">Edit Ingredient</string>
+    <string name="apply_ingredient_edit_label">Apply</string>
+    <string name="ingredient_cancel_button_label">Cancel</string>
+    <string name="delete_button_description">Delete Button</string>
+    <string name="add">Add</string>
+    <string name="save_recipe">Save Recipe</string>
+    <string name="edit_step_hint">Edit Step</string>
+    <string name="set_step_time">Set Step Time</string>
+    <string name="delete_all_recipes">Delete All Recipes</string>
+    <string name="add_new_recipe">Add New Recipe</string>
+    <string name="new_recipe_name">Recipe Name</string>
+    <string name="ingredients_checklist">Ingredients Checklist</string>
+    <string name="begin_button_text">Begin!</string>
+    <string name="start_timer_button_text">Start Timer</string>
+    <string name="next_step_no_time">Next Step</string>
+    <string name="end_timer_label">Stop Timer</string>
+    <string name="finish_recipe">Finish Recipe!</string>
+    <string name="recipe_finished_header">Recipe Finished!</string>
+    <string name="start_over_button_text">Start Over</string>
+    <string name="show_all_steps">Show All Steps</string>
+    <string name="tabs_description">Left side tab is the edit ingredients page, right side tab is the edit steps page.</string>
+    <string name="pause_timer_label">Pause Timer</string>
+    <string name="resume_timer_label">Resume Timer</string>
+    <string name="new_recipe_toast">Created new recipe for %1$s!</string>
+    <string name="saved_recipe_toast">Saved edits for %1$s!</string>
+    <string name="edit_or_delete_dialog">Edit or Delete recipe for  %1$s?</string>
+    <string name="delete_recipe_snackbar">%1$s Recipe deleted!</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="undo">Undo</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="warning">Warning</string>
+    <string name="notifs_on_request">Turn on notifications</string>
+    <string name="all_recipes_deleted">All recipes deleted!</string>
+    <string name="new_recipe_dialog_title">Add New Recipe</string>
+    <string name="notifications_enabled">Notifications enabled!</string>
+    <string name="notifications_disabled">Notifications disabled!</string>
+    <string name="unchecked_ingredients_warning">You haven\'t checked every ingredient. Are you sure you want to continue?</string>
+    <string name="notification_channel_title">Timer Notifications</string>
+    <string name="notification_channel_description">Notifications for recipe timers.</string>
+    <string name="timer_notification_title">Time Left On Step %1$d</string>
+    <string name="time_up_notification_title">Step %1$d Complete!</string>
+    <string name="time_up_notification_description">The timer for this step has completed!</string>
+    <string name="time_close_notification_title">Time\'s Almost Up!</string>
+    <string name="time_close_notification_description">Step %1$d has only %2$s left!</string>
+    <string name="add_ingredient_popup_title">Add New Ingredient</string>
+    <string name="add_ingredient_hint">Add Ingredient</string>
+    <string name="ingredient_deleted_snackbar">Ingredient Deleted!</string>
+    <string name="ingredients_tab">Ingredients</string>
+    <string name="steps_tab">Steps</string>
+    <string name="add_step_popup_title">Add New Step</string>
+    <string name="add_step_hint">Add Step</string>
+    <string name="step_deleted_snackbar">Step Deleted!</string>
+    <string name="recipe_time_description">Prep Time: %1$s\nTotal Time: %2$s</string>
+    <string name="recipe_hint">Recipe Type</string>
+    <string name="recipe_type_icon">Recipe type icon</string>
+    <string-array name="recipe_type_array">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+        <item>Dessert</item>
+        <item>Drink</item>
+        <item>Unspecified</item>
+        <item></item>
+    </string-array>
+    <string name="appwidget_text">No Suggested Recipes</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">Recipe Helper suggestions widget</string>
+    <string name="suggested_recipes">Suggested Recipes</string>
+    <string name="delete_all_recipes_title">Delete All Recipes?</string>
+    <string name="delete_all_recipes_subtitle">This cannot be undone!</string>
+    <string name="unsaved_changes_message">You have unsaved changes. Are you sure you want to exit?</string>
+    <string name="exit_without_saving">Exit Without Saving</string>
+</resources>

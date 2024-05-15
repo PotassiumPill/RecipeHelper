@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.RecipeHelper.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorScreenBackground"
+    android:theme="@style/Theme.RecipeHelper.AppWidgetContainer">
+
+<!--    <TextView-->
+<!--        android:id="@+id/empty_view"-->
+<!--        android:gravity="center"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:text="@string/suggested_recipes"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+    <include layout="@layout/widget_adapter_layout"
+        android:theme="@style/Theme.RecipeHelper.WidgetListItem.Preview1" />
+
+
+
+
+
+</RelativeLayout>

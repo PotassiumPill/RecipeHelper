@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimerProgressView">
+        <attr name="timeColor" format="reference|color" />
+        <attr name="colorBackground" format="reference|color" />
+        <attr name="progressColor" format="integer" />
+        <attr name="progressCloseColor" format="integer" />
+        <attr name="maxTime" format="integer" />
+        <attr name="currentTime" format="integer" />
+        <attr name="closeTime" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetPadding" format="dimension" />
+        <attr name="appWidgetInnerRadius" format="dimension" />
+        <attr name="appWidgetRadius" format="dimension" />
+        <attr name="widgetTitle" format="string" />
+        <attr name="widgetContent" format="string" />
+    </declare-styleable>
+</resources>

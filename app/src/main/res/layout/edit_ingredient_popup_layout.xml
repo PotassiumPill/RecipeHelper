@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edit_text_ingredient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingHorizontal="8dp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:inputType="textShortMessage|textCapSentences"
+        android:gravity="center_horizontal"
+        android:autofillHints="username"
+        android:importantForAutofill="no"
+        android:hint="@string/edit_ingredient_hint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ingredient_delete_button" />
+
+    <ImageButton
+        android:id="@+id/ingredient_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintTop_toTopOf="@id/edit_text_ingredient"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text_ingredient"
+        app:layout_constraintStart_toEndOf="@id/edit_text_ingredient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        android:contentDescription="@string/delete_button_description" />
+
+    <Button
+        android:id="@+id/apply_ingredient_edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/apply_ingredient_edit_label"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_ingredient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ingredient_cancel_button" />
+
+    <Button
+        android:id="@+id/ingredient_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/ingredient_cancel_button_label"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_ingredient"
+        app:layout_constraintStart_toEndOf="@id/apply_ingredient_edit_button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

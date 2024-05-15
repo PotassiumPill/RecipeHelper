@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edit_text_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingHorizontal="8dp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:inputType="textMultiLine|textCapSentences"
+        android:gravity="center_horizontal"
+        android:autofillHints="username"
+        android:importantForAutofill="no"
+        android:hint="@string/edit_step_hint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/step_delete_button" />
+
+    <ImageButton
+        android:id="@+id/step_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintTop_toTopOf="@id/edit_text_step"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text_step"
+        app:layout_constraintStart_toEndOf="@id/edit_text_step"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/delete_button_description" />
+
+    <ImageView
+        android:id="@+id/iv_timer_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/baseline_timer_24"
+        app:layout_constraintEnd_toStartOf="@id/edit_timer_hour"
+        app:layout_constraintTop_toTopOf="@id/edit_timer_hour"
+        android:contentDescription="@string/set_step_time" />
+
+    <EditText
+        android:id="@+id/edit_timer_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:autofillHints="username"
+        android:importantForAutofill="no"
+        android:hint="@string/edit_prep_time_hour_hint"
+        android:maxLength="2"
+        app:layout_constraintEnd_toStartOf="@id/tv_timer_colon_1"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_timer_colon_1" />
+
+    <TextView
+        android:id="@+id/tv_timer_colon_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/edit_prep_time_colon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@id/edit_timer_minute"
+        app:layout_constraintBaseline_toBaselineOf="@id/edit_timer_minute"/>
+
+    <EditText
+        android:id="@+id/edit_timer_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:autofillHints="username"
+        android:importantForAutofill="no"
+        android:hint="@string/edit_prep_time_minute_hint"
+        android:maxLength="2"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_step"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_timer_colon_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/edit_prep_time_colon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@id/edit_timer_minute"
+        app:layout_constraintBaseline_toBaselineOf="@id/edit_timer_minute"/>
+
+    <EditText
+        android:id="@+id/edit_timer_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:autofillHints="username"
+        android:importantForAutofill="no"
+        android:hint="@string/edit_prep_time_second_hint"
+        android:maxLength="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_timer_colon_2"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_timer_colon_2"/>
+
+    <Button
+        android:id="@+id/apply_step_edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/apply_ingredient_edit_label"
+        app:layout_constraintTop_toBottomOf="@id/edit_timer_minute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/step_cancel_button" />
+
+    <Button
+        android:id="@+id/step_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/ingredient_cancel_button_label"
+        app:layout_constraintTop_toBottomOf="@id/edit_timer_minute"
+        app:layout_constraintStart_toEndOf="@id/apply_step_edit_button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

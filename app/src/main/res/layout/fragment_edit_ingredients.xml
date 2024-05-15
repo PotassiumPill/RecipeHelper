@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditIngredientsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_prep_time_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/prep_time_header"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/edit_prep_time_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:autofillHints="username"
+            android:importantForAutofill="no"
+            android:hint="@string/edit_prep_time_hour_hint"
+            android:maxLength="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_prep_time_header"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_prep_time_header"/>
+
+        <TextView
+            android:id="@+id/tv_prep_time_colon_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"
+            android:text="@string/edit_prep_time_colon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toEndOf="@id/edit_prep_time_hour"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_prep_time_hour"/>
+
+        <EditText
+            android:id="@+id/edit_prep_time_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:layout_margin="8dp"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:autofillHints="username"
+            android:importantForAutofill="no"
+            android:hint="@string/edit_prep_time_minute_hint"
+            android:maxLength="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_prep_time_colon_1"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_prep_time_colon_1"/>
+
+        <TextView
+            android:id="@+id/tv_prep_time_colon_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"
+            android:text="@string/edit_prep_time_colon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toEndOf="@id/edit_prep_time_minute"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_prep_time_minute"/>
+
+        <EditText
+            android:id="@+id/edit_prep_time_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:layout_margin="8dp"
+            android:inputType="number"
+            android:gravity="center_horizontal"
+            android:autofillHints="username"
+            android:importantForAutofill="no"
+            android:textColor="@color/black"
+            android:hint="@string/edit_prep_time_second_hint"
+            android:maxLength="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_prep_time_colon_2"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_prep_time_colon_2"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingredients_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            tools:listitem="@layout/recyclerview_ingredient_item_layout"
+            app:layout_constraintTop_toBottomOf="@id/edit_prep_time_minute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_ingredient_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_action_add"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</FrameLayout>

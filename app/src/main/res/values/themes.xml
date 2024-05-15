@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecipeHelper" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorScreenBackground</item>
+        <item name="android:actionBarStyle">@style/MyActionBarLight</item>
+    </style>
+
+    <style name="Theme.RecipeHelper" parent="Base.Theme.RecipeHelper" />
+
+    <style name="Theme.RecipeHelper.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <!-- Radius of the outer bound of widgets to make the rounded corners -->
+        <item name="appWidgetRadius">16dp</item>
+        <!--
+        Radius of the inner view's bound of widgets to make the rounded corners.
+        It needs to be 8dp or less than the value of appWidgetRadius
+        -->
+        <item name="appWidgetInnerRadius">8dp</item>
+    </style>
+
+    <style name="Theme.RecipeHelper.AppWidgetContainer" parent="Theme.RecipeHelper.AppWidgetContainerParent">
+        <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
+        <item name="appWidgetPadding">16dp</item>
+    </style>
+
+    <style name="Theme.RecipeHelper.WidgetListItem">
+        <item name="widgetTitle"></item>
+        <item name="widgetContent"></item>
+    </style>
+    <style name="Theme.RecipeHelper.WidgetListItem.Preview1">
+        <item name="widgetTitle">Pan-Seared Salmon</item>
+        <item name="widgetContent">Prep Time: 5:00\nTotal Time: 15:00</item>
+    </style>
+</resources>

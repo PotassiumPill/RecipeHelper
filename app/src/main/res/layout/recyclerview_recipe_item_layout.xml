@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner_view"
+    android:backgroundTint="@color/colorAccentDark"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/recipe_text_view"
+        tools:text="placeholder text"
+        style="@style/recyclerview_recipe_text" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        tools:text="placeholder text"
+        style="@style/recyclerview_time_text" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/recipe_type_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:visibility="gone"
+        tools:src="@drawable/baseline_breakfast_24"
+        tools:visibility="visible"
+        android:contentDescription="@string/recipe_type_icon"/>
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner_view"
+    android:backgroundTint="@color/colorAccentDark"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/recipe_text_view"
+        tools:text="placeholder text"
+        android:text="?widgetTitle"
+        style="@style/recyclerview_recipe_text"/>
+
+    <TextView
+        android:id="@+id/time_text_view"
+        tools:text="placeholder text"
+        android:text="?widgetContent"
+        style="@style/recyclerview_time_text" />
+
+</LinearLayout>
