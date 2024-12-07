@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,13 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import com.example.recipehelper.R;
+
 import java.util.List;
 
 public class CheckboxListAdapter extends RecyclerView.Adapter<CheckboxListAdapter.CheckboxViewHolder> {

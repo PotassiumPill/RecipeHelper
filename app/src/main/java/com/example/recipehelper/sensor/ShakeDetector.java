@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.sensor;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;

@@ -1,12 +1,10 @@
-package com.example.recipehelper;
+package com.example.recipehelper.adapter;
 
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +14,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.example.recipehelper.widget.NewAppWidget;
+import com.example.recipehelper.R;
+import com.example.recipehelper.database.Recipe;
+import com.example.recipehelper.Utils;
 
 import java.util.List;
 
@@ -87,7 +88,7 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
         }
     }
 
-    void setRecipes(List<Recipe> recipes) {
+    public void setRecipes(List<Recipe> recipes) {
         mRecipes = recipes;
         notifyDataSetChanged();
         Intent intent = new Intent(mInflater.getContext(), NewAppWidget.class);

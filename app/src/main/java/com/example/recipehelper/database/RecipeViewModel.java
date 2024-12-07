@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.database;
 
 import android.app.Application;
 
@@ -20,7 +20,7 @@ public class RecipeViewModel extends AndroidViewModel {
         mAllRecipes = mRepository.getAllRecipes();
     }
 
-    LiveData<List<Recipe>> getAllRecipes() { return mAllRecipes; }
+    public LiveData<List<Recipe>> getAllRecipes() { return mAllRecipes; }
 
     public void insert(Recipe recipe) { mRepository.insert(recipe); }
 

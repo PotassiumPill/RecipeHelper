@@ -1,10 +1,17 @@
-package com.example.recipehelper;
+package com.example.recipehelper.widget;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
+
+import com.example.recipehelper.R;
+import com.example.recipehelper.Utils;
+import com.example.recipehelper.activity.StartRecipeActivity;
+import com.example.recipehelper.database.Recipe;
+import com.example.recipehelper.database.RecipeDao;
+import com.example.recipehelper.database.RecipeRoomDatabase;
 
 import java.util.Calendar;
 import java.util.List;

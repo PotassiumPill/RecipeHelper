@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -7,6 +7,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.RemoteViews;
+
+import com.example.recipehelper.R;
+import com.example.recipehelper.activity.StartRecipeActivity;
 
 /**
  * Implementation of App Widget functionality.

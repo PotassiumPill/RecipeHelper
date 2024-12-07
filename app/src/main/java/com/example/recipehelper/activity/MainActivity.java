@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.activity;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -7,13 +7,11 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.ActivityOptionsCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -30,6 +28,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.recipehelper.R;
+import com.example.recipehelper.database.Recipe;
+import com.example.recipehelper.adapter.RecipeListAdapter;
+import com.example.recipehelper.database.RecipeViewModel;
+import com.example.recipehelper.sensor.ShakeDetector;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.HashMap;
@@ -38,13 +41,13 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    public static final String EXTRA_NEW_RECIPE = "com.example.recipehelper.MainActivity.extra.NEW_RECIPE";
-    public static final String EXTRA_RECIPE = "com.example.recipehelper.MainActivity.extra.RECIPE";
-    public static final String EXTRA_INGREDIENTS = "com.example.recipehelper.MainActivity.extra.INGREDIENTS";
-    public static final String EXTRA_STEPS = "com.example.recipehelper.MainActivity.extra.STEPS";
-    public static final String EXTRA_TIMERS = "com.example.recipehelper.MainActivity.extra.TIMERS";
-    public static final String EXTRA_PREP = "com.example.recipehelper.MainActivity.extra.PREP";
-    public static final String EXTRA_TYPE = "com.example.recipehelper.MainActivity.extra.TYPE";
+    public static final String EXTRA_NEW_RECIPE = "com.example.recipehelper.activity.MainActivity.extra.NEW_RECIPE";
+    public static final String EXTRA_RECIPE = "com.example.recipehelper.activity.MainActivity.extra.RECIPE";
+    public static final String EXTRA_INGREDIENTS = "com.example.recipehelper.activity.MainActivity.extra.INGREDIENTS";
+    public static final String EXTRA_STEPS = "com.example.recipehelper.activity.MainActivity.extra.STEPS";
+    public static final String EXTRA_TIMERS = "com.example.recipehelper.activity.MainActivity.extra.TIMERS";
+    public static final String EXTRA_PREP = "com.example.recipehelper.activity.MainActivity.extra.PREP";
+    public static final String EXTRA_TYPE = "com.example.recipehelper.activity.MainActivity.extra.TYPE";
 
     private static final int REQUEST_NOTIFICATIONS = 0;
 

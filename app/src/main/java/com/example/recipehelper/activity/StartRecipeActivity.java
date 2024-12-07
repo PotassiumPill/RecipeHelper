@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.app.PictureInPictureParams;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -27,25 +26,32 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.example.recipehelper.adapter.CheckboxListAdapter;
+import com.example.recipehelper.notifications.NotificationsManager;
+import com.example.recipehelper.R;
+import com.example.recipehelper.fragment.TimerFragment;
+import com.example.recipehelper.Utils;
+import com.example.recipehelper.adapter.ViewPagerRecyclerAdapter;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.Executors;
 
 public class StartRecipeActivity extends AppCompatActivity implements TimerFragment.Listener {
     private static final String TAG = StartRecipeActivity.class.getSimpleName();
-    public static final String EXTRA_RECIPE = "com.example.recipehelper.StartRecipeActivity.extra.RECIPE";
-    public static final String EXTRA_INGREDIENTS = "com.example.recipehelper.StartRecipeActivity.extra.INGREDIENTS";
-    public static final String EXTRA_STEPS = "com.example.recipehelper.StartRecipeActivity.extra.STEPS";
-    public static final String EXTRA_TIMERS = "com.example.recipehelper.StartRecipeActivity.extra.TIMERS";
-    public static final String EXTRA_NOTIFICATION = "com.example.recipehelper.StartRecipeActivity.extra.NOTIFICATION";
+    public static final String EXTRA_RECIPE = "com.example.recipehelper.activity.StartRecipeActivity.extra.RECIPE";
+    public static final String EXTRA_INGREDIENTS = "com.example.recipehelper.activity.StartRecipeActivity.extra.INGREDIENTS";
+    public static final String EXTRA_STEPS = "com.example.recipehelper.activity.StartRecipeActivity.extra.STEPS";
+    public static final String EXTRA_TIMERS = "com.example.recipehelper.activity.StartRecipeActivity.extra.TIMERS";
+    public static final String EXTRA_NOTIFICATION = "com.example.recipehelper.activity.StartRecipeActivity.extra.NOTIFICATION";
     public static final String ACTION_PAUSE_TIMER = "com.example.recipehelper.action.PAUSE_TIMER";
     public static final String ACTION_RESUME_TIMER = "com.example.recipehelper.action.RESUME_TIMER";
     public static final String ACTION_STOP_TIMER = "com.example.recipehelper.action.STOP_TIMER";
 
-    private static final String START_RECIPE_CHECKED_KEY = "com.example.recipehelper.StartRecipeActivity.start_recipe_checked";
-    private static final String START_RECIPE_BUTTON_CLICKED_KEY = "com.example.recipehelper.StartRecipeActivity.start_recipe_button_clicked";
-    private static final String START_TIMER_BUTTON_CLICKED_KEY = "com.example.recipehelper.StartRecipeActivity.start_timer_button_clicked";
-    private static final String ADAPTER_POSITION_KEY = "com.example.recipehelper.StartRecipeActivity.adapter_position";
+    private static final String START_RECIPE_CHECKED_KEY = "com.example.recipehelper.activity.StartRecipeActivity.start_recipe_checked";
+    private static final String START_RECIPE_BUTTON_CLICKED_KEY = "com.example.recipehelper.activity.StartRecipeActivity.start_recipe_button_clicked";
+    private static final String START_TIMER_BUTTON_CLICKED_KEY = "com.example.recipehelper.activity.StartRecipeActivity.start_timer_button_clicked";
+    private static final String ADAPTER_POSITION_KEY = "com.example.recipehelper.activity.StartRecipeActivity.adapter_position";
     private static final String FRAGMENT_TAG = "TimerFragmentTag";
     private String recipeName;
     private ArrayList<String> ingredients;

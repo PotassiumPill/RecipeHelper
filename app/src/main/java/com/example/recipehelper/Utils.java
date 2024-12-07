@@ -1,6 +1,5 @@
 package com.example.recipehelper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Utils {

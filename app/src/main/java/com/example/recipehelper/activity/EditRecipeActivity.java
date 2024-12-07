@@ -1,6 +1,5 @@
-package com.example.recipehelper;
+package com.example.recipehelper.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -9,33 +8,35 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.recipehelper.fragment.EditIngredientsFragment;
+import com.example.recipehelper.fragment.EditStepsTimersFragment;
+import com.example.recipehelper.R;
+import com.example.recipehelper.database.Recipe;
+import com.example.recipehelper.Utils;
+import com.example.recipehelper.adapter.ViewPagerFragmentAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class EditRecipeActivity extends AppCompatActivity {
     private static final String TAG = EditRecipeActivity.class.getSimpleName();
 
-    public static final String EXTRA_NEW_RECIPE = "com.example.recipehelper.EditRecipeActivity.extra.NEW_RECIPE";
-    public static final String EXTRA_RECIPE = "com.example.recipehelper.EditRecipeActivity.extra.RECIPE";
-    public static final String EXTRA_INGREDIENTS = "com.example.recipehelper.EditRecipeActivity.extra.INGREDIENTS";
-    public static final String EXTRA_STEPS = "com.example.recipehelper.EditRecipeActivity.extra.STEPS";
-    public static final String EXTRA_TIMERS = "com.example.recipehelper.EditRecipeActivity.extra.TIMERS";
-    public static final String EXTRA_PREP = "com.example.recipehelper.EditRecipeActivity.extra.PREP";
-    public static final String EXTRA_TYPE = "com.example.recipehelper.EditRecipeActivity.extra.TYPE";
+    public static final String EXTRA_NEW_RECIPE = "com.example.recipehelper.activity.EditRecipeActivity.extra.NEW_RECIPE";
+    public static final String EXTRA_RECIPE = "com.example.recipehelper.activity.EditRecipeActivity.extra.RECIPE";
+    public static final String EXTRA_INGREDIENTS = "com.example.recipehelper.activity.EditRecipeActivity.extra.INGREDIENTS";
+    public static final String EXTRA_STEPS = "com.example.recipehelper.activity.EditRecipeActivity.extra.STEPS";
+    public static final String EXTRA_TIMERS = "com.example.recipehelper.activity.EditRecipeActivity.extra.TIMERS";
+    public static final String EXTRA_PREP = "com.example.recipehelper.activity.EditRecipeActivity.extra.PREP";
+    public static final String EXTRA_TYPE = "com.example.recipehelper.activity.EditRecipeActivity.extra.TYPE";
     private boolean isNewRecipe;
     private String recipeName;
     private ArrayList<String> ingredients;

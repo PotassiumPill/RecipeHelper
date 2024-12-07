@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,6 +13,9 @@ import android.view.ViewOutlineProvider;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
+
+import com.example.recipehelper.R;
+import com.example.recipehelper.Utils;
 
 public class TimerProgressView extends View {
 

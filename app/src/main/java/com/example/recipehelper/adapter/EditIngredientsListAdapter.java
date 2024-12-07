@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.recipehelper.R;
 
 import java.util.List;
 

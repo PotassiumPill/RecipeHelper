@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,14 +8,14 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.recipehelper.R;
+import com.example.recipehelper.view.TimerProgressView;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -24,9 +24,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TimerFragment extends Fragment {
 
     private static final String TAG = TimerFragment.class.getSimpleName();
-    private static final String TIME_KEY = "com.example.recipehelper.TimerFragment.time";
-    private static final String MAX_TIME_KEY = "com.example.recipehelper.TimerFragment.max_time";
-    private static final String PAUSED_KEY = "com.example.recipehelper.TimerFragment.paused";
+    private static final String TIME_KEY = "com.example.recipehelper.fragment.TimerFragment.time";
+    private static final String MAX_TIME_KEY = "com.example.recipehelper.fragment.TimerFragment.max_time";
+    private static final String PAUSED_KEY = "com.example.recipehelper.fragment.TimerFragment.paused";
     private static final String ARG_TIME = "time";
 
     public enum ButtonClicked {

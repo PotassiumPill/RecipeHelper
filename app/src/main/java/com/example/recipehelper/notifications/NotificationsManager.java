@@ -1,22 +1,20 @@
-package com.example.recipehelper;
+package com.example.recipehelper.notifications;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
-import android.os.SystemClock;
-import android.widget.Chronometer;
-import android.widget.RemoteViews;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 
-import java.util.ArrayList;
+import com.example.recipehelper.R;
+import com.example.recipehelper.Utils;
+import com.example.recipehelper.activity.StartRecipeActivity;
 
 public class NotificationsManager {
     private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";

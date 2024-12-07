@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeHelper"
         tools:targetApi="31">
-        <service android:name="NewAppWidgetService"
+        <service android:name=".widget.NewAppWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
         <receiver
-            android:name=".NewAppWidget"
+            android:name=".widget.NewAppWidget"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -29,26 +29,26 @@
         </receiver>
 
         <activity
-            android:name=".StartRecipeActivity"
+            android:name=".activity.StartRecipeActivity"
             android:exported="false"
             android:label="@string/start_recipe_activity_label"
             android:launchMode="singleTop"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activity.MainActivity" />
         </activity>
         <activity
-            android:name=".EditRecipeActivity"
+            android:name=".activity.EditRecipeActivity"
             android:exported="false"
             android:label="@string/edit_recipe_activity_label"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activity.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

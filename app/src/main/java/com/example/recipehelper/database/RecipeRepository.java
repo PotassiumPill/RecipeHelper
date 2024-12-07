@@ -1,4 +1,4 @@
-package com.example.recipehelper;
+package com.example.recipehelper.database;
 
 import android.app.Application;
 

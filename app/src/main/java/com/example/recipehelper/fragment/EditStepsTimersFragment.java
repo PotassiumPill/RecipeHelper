@@ -1,6 +1,5 @@
-package com.example.recipehelper;
+package com.example.recipehelper.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.example.recipehelper.adapter.EditStepsTimersListAdapter;
+import com.example.recipehelper.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
